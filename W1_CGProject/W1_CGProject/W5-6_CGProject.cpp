@@ -24,7 +24,9 @@ GLfloat Delta = 0.0;
 GLint Index = 0;
 GLfloat Red = 0.0;
 GLfloat Green = 0.0;
-GLfloat Blue = 0.0;void MyDisplay() {
+GLfloat Blue = 0.0;
+
+void MyDisplay() {
 	Red = PALETTE[Index][0] / 255.0f;
 	Green = PALETTE[Index][1] / 255.0f;
 	Blue = PALETTE[Index][2] / 255.0f;
@@ -49,7 +51,9 @@ void MyTimer(int Value) {
 	}
 	glutPostRedisplay();
 	glutTimerFunc(10, MyTimer, 1);
-}int main(int argc, char** argv) {
+}
+
+int main(int argc, char** argv) {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
 	glutInitWindowSize(300, 300);
